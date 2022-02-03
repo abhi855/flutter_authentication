@@ -16,5 +16,5 @@ class Database{
     ).then((value) => print("User added")).
     catchError((error)=>print(error.toString()));
   }
-  Stream<QuerySnapshot> get brews { return collectionReference.snapshots();}
+  Stream<QuerySnapshot> get brew { return collectionReference.snapshots();}
 }
