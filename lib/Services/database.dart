@@ -18,3 +18,10 @@ class Database{
   }
   Stream<QuerySnapshot> get brew { return collectionReference.snapshots();}
 }
+
+class UserData{
+  String uid;
+  String name,sugar;
+  int strength;
+  UserData({required this.uid,required this.sugar,required this.name,required this.strength});
+}

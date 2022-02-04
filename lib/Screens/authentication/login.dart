@@ -84,7 +84,13 @@ class _LogInState extends State<Login> {
                         if(_formKey.currentState!.validate()){
                           print(_email.text.trim());
                           print(_pass.text.trim());
-                          await authServices.login(_email.text.trim(), _pass.text.trim());
+                          try {
+                            await authServices.login(
+                                _email.text.trim(), _pass.text.trim());
+                          }catch(e)
+                          {
+                            print('1'+e.toString());
+                          }
                         }
                       },
                       child: Text('Sign In'),

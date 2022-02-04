@@ -17,9 +17,9 @@ class _BrewListState extends State<BrewList> {
   @override
   Widget build(BuildContext context) {
     List<Brews>?brews=widget.brews;
-    print(brews);
+    //print(brews);
     brews!.forEach((element) {
-      print(element.name);
+      //print(element.name);
     });
     return ListView.builder(
       //shrinkWrap: true,
@@ -37,6 +37,7 @@ class _BrewListState extends State<BrewList> {
         margin: EdgeInsets.fromLTRB(20.0, 6.0, 20.0, 0.0),
         child: ListTile(
           leading: CircleAvatar(
+            backgroundImage: AssetImage('assets/coffee_icon.png'),
             radius: 25,
             backgroundColor: Colors.brown[brews.strength],
           ),

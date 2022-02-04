@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_authentication/Screens/authentication/authentication.dart';
 import 'package:provider/provider.dart';
-
 import 'home_screen/home_screen.dart';
 
 class Wrapper extends StatelessWidget {
@@ -12,7 +11,8 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user=Provider.of<User?>(context);
-    print(user);
+    //print(user);
+    print(user==null?'null':user.uid);
     if(user==null){
       return Authentication();
     }else{

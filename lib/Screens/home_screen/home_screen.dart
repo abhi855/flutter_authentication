@@ -67,7 +67,15 @@ class HomeScreen extends StatelessWidget {
                   icon: Icon(Icons.settings))
             ],
           ),
-          body: BrewList(brews: snapshot.data),
+          body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/coffee_bg.png'),
+                fit: BoxFit.cover,
+              )
+            ),
+            child: BrewList(brews: snapshot.data)
+          ),
           // body: Container(
           //     child: Column(
           //   children: [
